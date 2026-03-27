@@ -4,7 +4,6 @@ on:
   pull_request:
     branches:
       - main
-      - master
       - development
   workflow_dispatch:
 
@@ -17,7 +16,7 @@ jobs:
       - name: Checkout Playwright repo
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
