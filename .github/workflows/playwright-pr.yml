@@ -1,10 +1,12 @@
 name: Playwright PR Tests
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
-      - development
   workflow_dispatch:
 
 jobs:
