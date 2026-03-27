@@ -6,3 +6,7 @@ test('home page loads successfully', async ({ page }) => {
   await expect(page).toHaveURL(/netlify\.app|localhost/);
   await expect(page.locator('body')).toBeVisible();
 });
+
+
+
+
