@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-test('app loads locally', async ({ page }) => {
+test('home page loads successfully', async ({ page }) => {
   await page.goto('/');
-  await expect(page).toHaveURL(/localhost/);
+
+  await expect(page).toHaveURL(/netlify\.app|localhost/);
+  await expect(page.locator('body')).toBeVisible();
 });
